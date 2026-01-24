@@ -7,6 +7,7 @@ def extract_weather_data():
     """
     Extract weather data from the Open-Meteo API.
     Returns the full raw json response
+    
     """
 
     url = "https://api.open-meteo.com/v1/forecast"
@@ -24,7 +25,7 @@ def extract_weather_data():
     }
 
     response  = requests.get(url, params=parameter)
-    response.raise_for_status() 
+    response.raise_for_status()
 
     return response.json()
 
@@ -45,5 +46,3 @@ if __name__ == "__main__":
 
     raw_weather_data = extract_weather_data()
     save_data(raw_weather_data)
-
-    print(json.dumps(raw_weather_data, indent=2))  
