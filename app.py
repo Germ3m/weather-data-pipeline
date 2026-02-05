@@ -4,7 +4,7 @@ from load import load_weather_data
 from load import *
 
 db_config = {
-    "host": "localht",
+    "host": "localhost",
     "database": "weather_db",
     "user": "postgres",
     "password": "20021980"
