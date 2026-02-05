@@ -1,0 +1,8 @@
+CREATE TABLE weather_data(
+    id SERIAL primary key NOT NULL,
+    timestamp INTEGER NOT NULL,
+    temperature REAL,
+    humidity INTEGER,
+    precipitation REAL,
+    wind_speed REAL
+)

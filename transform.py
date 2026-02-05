@@ -15,8 +15,8 @@ def transform_weather_data(raw_data):
         record = {
             "timestamp": int(datetime.fromisoformat(times[i]).timestamp()),
             "temperature": temperature[i],
-            "Precipitation": precipitation[i],
             "humidity": humidity[i],
+            "Precipitation": precipitation[i],
             "wind_speed": wind_speed[i]
         }
         
