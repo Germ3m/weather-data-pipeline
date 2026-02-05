@@ -1,9 +1,10 @@
 from extract import extract_weather_data
 from transform import transform_weather_data
 from load import load_weather_data
+from load import *
 
 db_config = {
-    "host": "localhost",
+    "host": "localht",
     "database": "weather_db",
     "user": "postgres",
     "password": "20021980"
