@@ -1,8 +1,11 @@
+
+DROP TABLE IF EXISTS weather_data;
+
 CREATE TABLE weather_data(
     id SERIAL primary key NOT NULL,
-    timestamp INTEGER NOT NULL,
-    temperature REAL,
-    humidity INTEGER,
+    date DATE NOT NULL,
+    max_temperature REAL,
+    min_temperature REAL,
     precipitation REAL,
-    wind_speed REAL
+    max_wind_speed REAL
 )

@@ -29,7 +29,8 @@ An end-to-end ETL (Extract, Transform, Load) pipeline that extracts raw weather 
 
 - **Python 3.10+** — Programming language  
 - **Requests** — API interaction  
-- **PostgreSQL** — Relational database  
+- **PostgreSQL** — Relational database
+- **Streamlit**- Data Visualisation
 ## Project Structure
 
     weather-data-pipeline/
@@ -69,6 +70,6 @@ An end-to-end ETL (Extract, Transform, Load) pipeline that extracts raw weather 
 
 - bash
 - python app.py
-
+- streamlit run dahsboard.py
 
 

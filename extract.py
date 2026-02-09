@@ -17,13 +17,14 @@ def extract_weather_data():
     parameter = {
         "latitude": -26.2041,
         "longitude": 28.0473,
-        "hourly": [
-            "temperature_2m",
-            "relative_humidity_2m",
-            "precipitation",
-            "wind_speed_10m"
-        ],
-        "timezone": "Africa/Johannesburg"
+        "daily": [
+            "temperature_2m_max",
+            "temperature_2m_min",
+            "precipitation_sum",
+            "wind_speed_10m_max"
+        ], #The parameters are the keys in which the data is extracted as, if i want ot access i need to use the exact same var names 
+        "timezone": "Africa/Johannesburg",
+        "forecast_days":7  #The number of days i want to see the forecast of
     }
 
     response  = requests.get(url, params=parameter)

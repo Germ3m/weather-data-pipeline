@@ -23,22 +23,22 @@ def load_weather_data(records, db_config):
 
     insert_query = """
         INSERT INTO weather_data (
-            timestamp,
-            temperature,
-            humidity,
-            Precipitation,
-            wind_speed
+            date,
+            max_temperature,
+            min_temperature,
+            precipitation,
+            max_wind_speed
         )
-        VALUES (%s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s,%s)
     """
 
     data_to_insert = [
         (
-            record["timestamp"],
-            record["temperature"],
-            record["humidity"],
-            record["Precipitation"],
-            record["wind_speed"]
+            record["date"],
+            record["max_temperature"],
+            record["min_temperature"],
+            record["precipitation_sum"],
+            record["max_wind_speed"]
         )
         for record in records
     ]
@@ -49,4 +49,4 @@ def load_weather_data(records, db_config):
     cursor.close()
     connection.close()
 
-    print(f"Loaded {len(data_to_insert)} records into weather_data.")
+    print(f"Loaded {len(data_to_insert)} daily records into weather_data.")
